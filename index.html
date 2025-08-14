@@ -42,7 +42,7 @@
     .container{ max-width:1100px; margin:0 auto; padding:18px; }
     .brand{ display:flex; align-items:center; gap:12px }
     .logo{
-      width:52px; height:52px; background: var(--primary);
+      width:52px; height:52px; background: #272d2c;
       border-radius:8px;
       display:flex; align-items:center; justify-content:center;
       font-weight:700; color:#fff;
@@ -80,11 +80,34 @@
     .cards{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px }
 
     .pkg{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
       background: var(--bg-light);
       padding:18px;
       border-radius:10px;
       border:1px solid #333;
     }
+    .pkg .ad-banner {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    } 
+    .pkg .order-btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        background: var(--primary);
+        color: #fff;
+    }    
+    .pkg .order-btn:hover {
+         background: var(--primary-dark);
+    }     
     .price{ font-size:22px; color: var(--primary); font-weight:700; margin-bottom:6px }
 
     footer{
@@ -97,15 +120,15 @@
 </head>
 <body>
 
-  <div class="topbar">
-    <div>📧 <a href="mailto:info@example.com">info@example.com</a> | 📞 <a href="tel:+8801907816164">+880 1907 816164</a></div>
-    <div><a href="#">Facebook</a> | <a href="#">YouTube</a></div>
+  <div class="topbar">a
+    <div>📧 <a href="contactdrootstudio@gmail.com">contactdrootstudio@gmail.com</a> | 📞 <a href="tel:+8801834068829">+880 1834 068829</a></div>
+    <div><a href="https://www.facebook.com/DRootStudio">Facebook</a> | <a href="#">YouTube</a></div>
   </div>
 
   <header>
     <div class="container" style="display:flex; align-items:center;">
       <div class="brand">
-        <div class="logo">BD</div>
+        <div class="logo"><img src="path/to/your/logo.png" alt="Logo" width="200" height="60"> </div>
         <div>
           <div style="font-weight:700">BDITWork</div>
           <div style="font-size:13px; color:var(--text-muted)">Your Trusted IT Partner</div>
@@ -139,20 +162,22 @@
     <h2>প্যাকেজ</h2>
     <div class="cards">
       <div class="pkg">
-        <h3>স্টার্টার</h3>
-        <div class="price">৳ ৩,০০০</div>
-        <p>10GB হোস্টিং, ডোমেইন, লোগো ডিজাইন</p>
+          <img src="path/to/your/ad-banner.jpg" alt="Advertisement" class="ad-banner">
+          <button class="order-btn">অর্ডার করুন</button>
       </div>
       <div class="pkg">
-        <h3>বেসিক</h3>
-        <div class="price">৳ ৪,০০০</div>
-        <p>20GB হোস্টিং, সোশ্যাল মিডিয়া সেটআপ</p>
+          <img src="path/to/your/ad-banner.jpg" alt="Advertisement" class="ad-banner">
+          <button class="order-btn">অর্ডার করুন</button>
       </div>
       <div class="pkg">
-        <h3>সুপার</h3>
-        <div class="price">৳ ৫,০০০</div>
-        <p>50GB হোস্টিং, প্রিমিয়াম সাপোর্ট</p>
+          <img src="path/to/your/ad-banner.jpg" alt="Advertisement" class="ad-banner">
+          <button class="order-btn">অর্ডার করুন</button>
       </div>
+      <div class="pkg">
+          <img src="path/to/your/ad-banner.jpg" alt="Advertisement" class="ad-banner">
+          <button class="order-btn">অর্ডার করুন</button>
+      </div>      
+
     </div>
   </section>
 
