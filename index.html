@@ -30,6 +30,8 @@
       font-size:14px;
       display:flex;
       justify-content:space-between;
+      flex-wrap: wrap;
+      gap: 6px;
     }
     .topbar a{color:#fff; text-decoration:none;}
 
@@ -40,14 +42,14 @@
       z-index:50;
     }
     .container{ max-width:1100px; margin:0 auto; padding:18px; }
-    .brand{ display:flex; align-items:center; gap:12px }
+    .brand{ display:flex; align-items:center; gap:12px; flex-wrap: wrap; }
     .logo{
       width:100px; height:90px; background: #272d2c;
       border-radius:8px;
       display:flex; align-items:center; justify-content:center;
       font-weight:700; color:#fff;
     }
-    nav{ display:flex; gap:16px; margin-left:auto; }
+    nav{ display:flex; gap:16px; justify-content: center; flex-wrap: wrap; }
     nav a{ color: var(--text-light); text-decoration:none; padding:8px 12px; border-radius:6px }
     nav a.cta{ background: var(--primary); }
     nav a:hover{ background: var(--primary-dark); }
@@ -108,6 +110,7 @@
     .pkg .order-btn:hover {
          background: var(--primary-dark);
     }     
+
     .price{ font-size:22px; color: var(--primary); font-weight:700; margin-bottom:6px }
 
     footer{
@@ -116,6 +119,47 @@
       padding:24px 0;
     }
     footer a{ color: var(--primary); text-decoration:none }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 12px;
+      }
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .hero h1 {
+        font-size: 22px;
+      }
+      .hero p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 80px;
+        height: 70px;
+      }
+      .hero h1 {
+        font-size: 20px;
+      }
+      nav a {
+        padding: 6px 8px;
+        font-size: 14px;
+      }
+      .btn, .pkg .order-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -128,12 +172,12 @@
   <header>
     <div class="container" style="display:flex; align-items:center;">
       <div class="brand">
-        <div class="logo"><img src="tt.png" alt="Logo" width="200" height="60"> </div>
+        <div class="logo"><img src="tt.png" alt="Logo" width="200" height="60"></div>
         <div>
           <div style="font-weight:700">D Root Studio</div>
           <div style="font-size:13px; color:var(--text-muted)">Your Trusted IT Partne.</div>
         </div>
-      </div>
+      </div><br>
       <nav>
         <a href="#">হোম</a>
         <a href="#">আমরা</a>
@@ -177,7 +221,6 @@
           <img src="path/to/your/ad-banner.jpg" alt="Advertisement" class="ad-banner">
           <button class="order-btn">অর্ডার করুন</button>
       </div>      
-
     </div>
   </section>
 
